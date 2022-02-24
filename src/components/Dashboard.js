@@ -3,9 +3,24 @@ import { toast } from "react-toastify";
 import Form from "./Form";
 
 const testData = [
-  { comments: "test1", summary: "summ1" },
-  { comments: "test2", summary: "summ2" },
-  { comments: "test3", summary: "summ3" },
+  {
+    comments:
+      "Microscopic section is pending.M.D.Neuropathologistvbl, Microscopic section from the right hippocampal formation shows complete atrophy   both of the dentate gyrus and hippocampal gyrus.  There is complete obliteration of these regions with marked gliosis.  This is diagnostic of hippocampal sclerosis.",
+    summary:
+      "1.Multiple old contusions of the frontal and temporal lobes.2. Subarachnoid hemorrhage  frontal lobes  minimal.3. Right hippocampal atrophy.4. Normal spinal cord.",
+  },
+  {
+    comments:
+      "Jimmy McLeod  Sr.Case #10-3859June 16  2010NEUROPATHOLOGY REPORT(Continued)Comment:In terms of the age of the lesions present in this brain  all of the contusions are old.  The subarachnoid hemorrhage of the right temporal lobe is fresh.M.D.Neuropathologistvbl,NA",
+    summary:
+      "1.Subarachnoid hemorrhage of the right temporal lobe  fresh.2. Old contusions of the right frontal pole  orbito-frontal regions  and right temporal lobe.3. Hydrocephalus  mild.",
+  },
+  {
+    comments:
+      "Microscopic section is pending.M.D.Neuropathologistvbl, Microscopic sections were taken from the right parietal white matter at the site of a large vessel.  Microscopic examination shows a vascular malformation of the white matter composed of many vessels with very thin walls   many of them a single cell endothelium.  There are no infarcts or hemorrhages.",
+    summary:
+      "1.Subdural hemorrhages  organized  minimal.2.Multiple old contusions of the frontal and temporal lobes.3.Hydrocephalus  mild.4.Vascular malformation and hemorrhage of the right parietal white matter.5.Atherosclerosis of the cerebral vessels  mild.",
+  },
 ];
 
 const Dashboard = () => {
@@ -13,11 +28,11 @@ const Dashboard = () => {
 
   return (
     <div className="w-full flex flex-col">
-      <div className="w-[40rem] h-20 bg-gray-100 my-4 mx-auto rounded p-2">
-        Summary: {testData[dataIndex].summary}
+      <div className="w-[40rem] h-min min-h-20  bg-gray-100 my-4 mx-auto rounded p-2">
+        <b>Summary:</b> {testData[dataIndex].summary}
       </div>
-      <div className="w-[40rem] h-20 bg-gray-100 my-4 mx-auto rounded p-2">
-        Comments: {testData[dataIndex].comments}
+      <div className="w-[40rem] h-min min-h-20 bg-gray-100 my-4 mx-auto rounded p-2">
+        <b>Comments:</b> {testData[dataIndex].comments}
       </div>
       <Form dataIndex={dataIndex} />
       <button
